@@ -1,71 +1,33 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-author: 
-  name: Flávio de Souza
-  email: fdsdev@gmail.com
-title: MyBooksBlog
-email: fdsdev@gmail.com
-
-description: >- # this means to ignore newlines until "baseurl:"
-  Just a space for notes, ideas, thoughts and so on.
-
-baseurl: "/books-blog" # the subpath of your site, e.g. /blog
+title: Simplórias Anotações
+description: 
+permalink: ':title/'
+baseurl: "/books-blog" 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+site-twitter: 
 
-show_excerpts: true
+# Author Settings
+author: Flávio de Souza
+author-img: fdsdev.png # add your photo
+about-author: Espaço destinado para a simples finalidade de arquivar e organizar anotações extraídas a partir da leituras e estudos nas mais diversas áreas.
+social-twitter: flaviosouzadev
+social-github: flaviodev # add your Github handle
+social-linkedin: flaviodev
+social-email: fdsdev@gmail.com # add your Email address
 
-minima:
-  date_format: "%b %-d, %Y"
+# Disqus
+discus-identifier: # add your discus identifier
 
-  # generate social links in footer
-  social_links:
-    #twitter: jekyllrb
-    github:  flaviodev
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    linkedin: flaviodev
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
+# Tracker
+analytics: # Google Analytics
 
-    
-# Build settings
-markdown: kramdown
-theme: minima
+# Build Settings
+markdown: 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+paginate: 20
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
